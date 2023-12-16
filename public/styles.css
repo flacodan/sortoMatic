@@ -1,0 +1,20 @@
+body {
+    background-color: bisque;
+}
+.flexbox-container {
+    display: flex;
+    background-color: aquamarine;
+}
+
+.leftColumn {
+    min-height: 300;
+    width: 200px;
+}
+
+.CenterColumn {
+    min-height: 300;
+}
+
+.rightColumn {
+    min-height: 300;
+}
