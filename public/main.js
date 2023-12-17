@@ -55,11 +55,9 @@ function buildSortedTaskList(sortedTaskArray) {
     sortedList.innerHTML='';
     for(let i=0; i < sortedTaskArray.length; i++) {
         let thisItem = document.createElement('option');
-        // thisItem.style.border = "none";
-        // thisItem.style.background = "none";
         thisItem.innerHTML = sortedTaskArray[i].task;
         sortedList.appendChild(thisItem);
-        console.log(thisItem);
+        //console.log(thisItem);
     }
 
 }

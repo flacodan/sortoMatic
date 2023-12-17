@@ -2,6 +2,17 @@ body {
     background-color: bisque;
 }
 
+select {
+    border: none;
+    background: none;
+    overflow: hidden;
+    outline: none;
+    width: 70%;
+}
+/* option {
+    border: none;
+} */
+
 .function-button {
     color: rgb(192, 85, 121);
     margin: 10px;

@@ -12,8 +12,8 @@
         <div class="leftColumn flexbox-item">
             <h4 class="list-h4">UNPRIORITIZED ASSORTED AND UNSORTED TASKS!</h4>
             <div class="sheet">
-                <div class="l-margin margin"></div>
-                <div class="r-margin margin"></div>
+                <!-- <div class="l-margin margin"></div>
+                <div class="r-margin margin"></div> -->
                 <header>
                  <span class="sheet-title">
                     Task List
@@ -36,24 +36,28 @@
                 <button id="sort-button" class="function-button">PRIORITIZE</button>
             </div>
             <div class="footerDiv">
+                <select name="new-list" id="new-list" size="3">
+                    <option value="0">Item1</option>
+                    <option value="1">Item2</option>
+                </select>
                 <p>Over 0 Tasks Served!</p>
             </div>
         </div>
         <div class="rightColumn flexbox-item">
             <h4 class="list-h4">PLEASINGLY PRIORITIZED AND SORTED TASKS:</h4>
             <div class="sheet">
-                <div class="l-margin margin"></div>
-                <div class="r-margin margin"></div>
+                <!-- <div class="l-margin margin"></div> -->
+                <!-- <div class="r-margin margin"></div> -->
                 <header>
                  <span class="sheet-title">
                     Deluxe List
                  </span>
                 </header>
-                <span id="sorted-list"></span>
+                <span><select name="new-list"  id="sorted-list" size="3"></select></span>
             </div>
             <div class="underListDiv">
                 <label for="delete-task-button" class="instruction-label">
-                    Finished A Task? Tired Of It Taunting You? Select A Priorited Task Above And Click The Button Below!
+                    Finished A Task of Just Sick Of It? Select A Task Above And Click The Button Below!
                 </label>
                 <button id="delete-task-button" name="delete-task-button" class="function-button">MISCHIEF MANAGED</button>
             </div>
