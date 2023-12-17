@@ -4,17 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css">
-    <title>Sort -O- Matic</title>
+    <title>SORT -O- MATIC</title>
 </head>
 <body>
     <header class="header"></header>
     <div class="flexbox-container">
-        <div class="leftColumn"></div>
-        <div class="centerColumn">
-            <p>Sort -O- Matic</p>
+        <div class="leftColumn flexbox-item">
+            <h4 class="list-h4">UNPRIORITIZED ASSORTED AND UNSORTED TASKS!</h4>
+            <div class="sheet">
+                <div class="l-margin margin"></div>
+                <div class="r-margin margin"></div>
+                <header>
+                 <span class="sheet-title">
+                    Task List
+                 </span>
+                </header>
+                <span id="full-list"></span>
+            </div>
+            <div class="underListDiv">
+                <label for="addTaskField" class="instruction-label">
+                    Enter That Thing You Have To Do That You Haven't Got Time For:
+                </label>
+                <input name="add-task-field" type="text" placeholder="unburden but keep it short" id="add-task-field">
+                <button id="add-button" class="function-button">FILE AWAY...</button>
+            </div>
         </div>
-        <div class="rightColumn"></div>
+        <div class="centerColumn">
+            <div class="titleDiv"><span class="page-title-span">SORT</span><span class="page-title-span"> -O- </span><span class="page-title-span">MATIC</span></div>
+            <div class="subTitleDiv">Deluxe Priorities Edition</div>
+            <div class="sortButtonDiv">
+                <button id="sort-button" class="function-button">PRIORITIZE</button>
+            </div>
+            <div class="footerDiv">
+                <p>Over 0 Tasks Served!</p>
+            </div>
+        </div>
+        <div class="rightColumn flexbox-item">
+            <h4 class="list-h4">PLEASINGLY PRIORITIZED AND SORTED TASKS:</h4>
+            <div class="sheet">
+                <div class="l-margin margin"></div>
+                <div class="r-margin margin"></div>
+                <header>
+                 <span class="sheet-title">
+                    Deluxe List
+                 </span>
+                </header>
+                <span id="sorted-list"></span>
+            </div>
+            <div class="underListDiv">
+                <label for="delete-task-button" class="instruction-label">
+                    Finished A Task? Tired Of It Taunting You? Select A Priorited Task Above And Click The Button Below!
+                </label>
+                <button id="delete-task-button" name="delete-task-button" class="function-button">MISCHIEF MANAGED</button>
+            </div>
+        </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/js"></script>
 </body>
 </html>

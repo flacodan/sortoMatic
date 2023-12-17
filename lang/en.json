@@ -1,0 +1,10 @@
+```JSON
+
+<!-- ./lang/en.json -->
+
+{
+"fullListHeading": "UNSERVED ASSORTED BUT UNSORTED TASKS!",
+"sortedListHeading": "PLEASINGLY PRIORITIZED SORTED TASKS:",
+
+"zEndDummy": ""
+}

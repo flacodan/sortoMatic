@@ -1,20 +1,124 @@
 body {
     background-color: bisque;
 }
-.flexbox-container {
-    display: flex;
-    background-color: aquamarine;
+
+.function-button {
+    color: rgb(192, 85, 121);
+    margin: 10px;
+    width: 60%;
+    border-radius: 10px;
+    border-style: outset;
+    border-width: 5px;
+    background-color: aliceblue;
+    border-color: #9198e5;
+    align-self: center;
 }
 
-.leftColumn {
-    min-height: 300;
-    width: 200px;
+div {
+    align-content: center;
+    text-align: center;
+}
+
+.flexbox-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+.flexbox-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    width: 35%;
+    flex-grow: 1;
+    background-color: rgb(241, 211, 174);
 }
 
 .CenterColumn {
-    min-height: 300;
+    margin: 5px;
+    min-height: 100%;
+    width: 20%;
+    flex-direction: column;
+    justify-self: center;
+    flex-grow: 0;
 }
 
-.rightColumn {
-    min-height: 300;
+.titleDiv {
+    font-family: harrington;
+    font-weight: 800;
+    font-size: 40px;
+    flex-wrap: wrap;
 }
+
+.page-title-span {
+    text-align: center;
+    display: block;
+}
+
+.subTitleDiv {
+    font-family: 'Lucida Handwriting';
+    text-align: center;
+    padding: 10px;
+}
+
+.list-h4 {
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+}
+
+.instruction-label {
+    width: 100%;
+    text-align: center;
+}
+
+#sort-button {
+    height: 40px;
+}
+
+/* Just a some paper list style for fun
+from: https://codepen.io/ceg9498/post/creating-lined-paper */
+.sheet{
+    font-family: 'Indie Flower', cursive;
+    background-color: white;
+    background: repeating-linear-gradient(white, white 25px, #9198e5 26px, #9198e5 27px);
+    background-position-y: 49px;
+    height: 550px;
+    width: 250px;
+    padding: 0;
+    margin: 10px;
+   }
+   .sheet header {
+    background-color: white;
+    background: linear-gradient(white, white 48px, #9198e5 49px, #9198e5 50px);
+    height: 50px;
+   }
+   .sheet-title {
+    position: relative;
+    top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 10px;
+   }
+   .sheet-text {
+    position: relative;
+    top: 33px;
+    font-size: 22px;
+    width: 280px;
+    margin: 0 55px;
+    line-height: 27px;
+   }
+   .margin {
+    width: 40px;
+    height: 100%;
+   }
+   .l-margin {
+    float: left;
+    border-right: 2px solid pink;
+   }
+   .r-margin {
+    float: right;
+    border-left: 1px solid pink;
+   }
