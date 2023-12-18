@@ -20,9 +20,19 @@ app.get('/js', (req, res) => {
 })
 
 app.post('/create-task', (req, res) => {
-    db.push(req.body);
-    tasksServed++;
-    res.send(db);
+    if(db.length < 10) {
+        db.push(req.body);
+        tasksServed++;
+        res.send(db);
+    } else {
+        res.send(null);
+    }
+})
+
+app.delete('/delete-task/:index', (req, res) => {
+    let index = req.params.index;
+    sortedDb.splice(index, 1);
+    res.send(sortedDb);
 })
 
 app.get('/sort-task', (req, res) => {

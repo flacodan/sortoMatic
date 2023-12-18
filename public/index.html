@@ -10,7 +10,7 @@
     <header class="header"></header>
     <div class="flexbox-container">
         <div class="leftColumn flexbox-item">
-            <h4 class="list-h4">UNPRIORITIZED ASSORTED AND UNSORTED TASKS!</h4>
+            <h4 class="list-h4">UNPRIORITIZED ASSORTED AND UNSORTED TASKS:</h4>
             <div class="sheet">
                 <!-- <div class="l-margin margin"></div>
                 <div class="r-margin margin"></div> -->
@@ -25,7 +25,7 @@
                 <label for="addTaskField" class="instruction-label">
                     Enter That Thing You Have To Do That You Haven't Got Time For:
                 </label>
-                <input name="add-task-field" type="text" placeholder="unburden but keep it short" id="add-task-field">
+                <input name="add-task-field" type="text" maxlength="23" placeholder="unburden but keep it short" id="add-task-field">
                 <button id="add-button" class="function-button">FILE AWAY...</button>
             </div>
         </div>
@@ -36,10 +36,6 @@
                 <button id="sort-button" class="function-button">PRIORITIZE</button>
             </div>
             <div class="footerDiv">
-                <select name="new-list" id="new-list" size="3">
-                    <option value="0">Item1</option>
-                    <option value="1">Item2</option>
-                </select>
                 <p>Over 0 Tasks Served!</p>
             </div>
         </div>
@@ -57,7 +53,7 @@
             </div>
             <div class="underListDiv">
                 <label for="delete-task-button" class="instruction-label">
-                    Finished A Task of Just Sick Of It? Select A Task Above And Click The Button Below!
+                    Finished A Task? Just Sick Of It? Select A Task From the Deluxe List And Click The Button:
                 </label>
                 <button id="delete-task-button" name="delete-task-button" class="function-button">MISCHIEF MANAGED</button>
             </div>
