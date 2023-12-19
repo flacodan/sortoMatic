@@ -12,6 +12,7 @@ addButton.addEventListener('click', (event) => {
         return;
     }
     let maBod = { task: taskInput.value };
+    taskInput.value='';
     axios.post('/create-task', maBod)
     .then((response) => { 
         if (response.data) {buildFullTaskList(response.data);}
@@ -29,10 +30,21 @@ sortButton.addEventListener('click', (event) => {
 })
 
 deleteButton.addEventListener('click', (event) => {
+    if (sortedList.selectedIndex <=0) {
+        alert("You need to select a task before we can clear it.")
+        return;
+    }
+
     let selectedIndex = sortedList.options[sortedList.selectedIndex].id;
+
+    let name = sortedList.options[selectedIndex].text;
     if (selectedIndex) {
-        axios.delete('/delete-task/' + selectedIndex)
+        axios.delete('/delete-sortedTask/' + selectedIndex)
         .then((response) => { buildSortedTaskList(response.data); })
+        .catch((err) => { console.log(err); });
+
+        axios.delete('/delete-task/' + name)
+        .then((response) => { buildFullTaskList(response.data); })
         .catch((err) => { console.log(err); });
     }
 })
@@ -55,7 +67,6 @@ function buildSortedTaskList(sortedTaskArray) {
         thisItem.innerHTML = sortedTaskArray[i].task;
         thisItem.id = i;
         sortedList.appendChild(thisItem);
-        //console.log(thisItem);
     }
 
 }

@@ -29,7 +29,17 @@ app.post('/create-task', (req, res) => {
     }
 })
 
-app.delete('/delete-task/:index', (req, res) => {
+app.delete('/delete-task/:name', (req, res) => {
+    let name = req.params.name;
+    for(let i = 0; i < db.length; i++) {
+        if (db[i].task === name) {
+            db.splice(i, 1);
+        }
+    }
+    res.send(db);
+})
+
+app.delete('/delete-sortedTask/:index', (req, res) => {
     let index = req.params.index;
     sortedDb.splice(index, 1);
     res.send(sortedDb);
@@ -47,12 +57,15 @@ app.listen(8000, () => {
 
 function shuffleSort() {
     const uniqueSet = new Set()
-    const max = db.length - 1;
+    const max = db.length;
     sortedDb.length = 0;
+    const numToSort = (max < 3) ? max : 3;
 
-    while(uniqueSet.size < 3) {
-      uniqueSet.add(Math.floor(Math.random() * max) + 1);
+    while(uniqueSet.size < numToSort) {
+      uniqueSet.add(Math.floor(Math.random() * max));
     }
     uniqueSet.forEach((newIndex) => { sortedDb.push(db[newIndex]); })
     return sortedDb;
 }
+
+// sortedDb lloks like: { task: 'jkfghjf' }, { task: 'kmfgjjh' }, { task: 'hsder' }
